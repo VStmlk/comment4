@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_nav_view"
+        tools:context=".Message">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/message_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="title"/>
+            <TextView
+                android:id="@+id/message_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="time"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"/>
+            <ImageView
+                android:id="@+id/message_image"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:src="@drawable/image_head"/>
+            <TextView
+                android:id="@+id/message_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="十多个撒旦撒旦阿萨是的这里我们想要使用RecyclerView来实现和ListView相同的效果，因此就需要准备一份同样的水果图片。简单起见，我们就直接从ListViewTest项目中把图片复制过来就可以了，另外顺便将Fruit类和fruit_item.xml也复制过来，省得将同样的代码再写一遍。方法撒阿萨啊啊啊啊撒撒射点阿"
+                android:layout_margin="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/commentRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#FFFFFF"/>
+            <!-- android:background="#FFFFFF"，白色背景简单处理ScrollView和RecyclerView的冲突-->
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@+id/bottom_nav_view" />-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu" />
+</RelativeLayout>
